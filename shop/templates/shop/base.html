@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Гриль-дом «от Элтаджа» — шаурма и шашлык на углях{% endblock %}</title>
+  <meta name="description" content="Шаурма и шашлык на живых углях от Элтаджа. Маринуем сами, жарим при вас, доставляем горячим.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="{% url 'shop:menu' %}" class="brand">
+        <span class="flame">🔥</span>
+        <span><b>ЭЛТАДЖ</b><small>гриль на углях</small></span>
+      </a>
+      <nav class="nav">
+        <a href="{% url 'shop:menu' %}">Меню</a>
+        <a href="{% url 'shop:menu' %}#about">О нас</a>
+        <a href="{% url 'shop:menu' %}#delivery">Доставка</a>
+        <a href="{% url 'shop:menu' %}#contacts">Контакты</a>
+      </nav>
+      <a href="{% url 'shop:cart_detail' %}" class="cart-btn">
+        🛒 Корзина <span class="count">{{ cart|length }}</span>
+      </a>
+    </div>
+  </header>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}<li>{{ message }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  <main>{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="wrap">
+      <div class="foot-brand">
+        <b>🔥 ЭЛТАДЖ</b>
+        <p style="margin-top:.6rem">Живой огонь, честное мясо и рецепты, которым уже не одно поколение. <span class="signature">от Элтаджа</span></p>
+      </div>
+      <div id="delivery">
+        <h4>Доставка</h4>
+        <p>Ежедневно 10:00 — 23:00<br>Бесплатно от 1500 ₽<br>Среднее время — 40 минут</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <p><a href="tel:+79000000000">+7 (900) 000-00-00</a><br>
+        ул. Угольная, 1<br>
+        <a href="{% url 'admin:index' %}">Панель управления</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">© {% now "Y" %} Гриль-дом «от Элтаджа». Сделано на живом огне.</div>
+  </footer>
+
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

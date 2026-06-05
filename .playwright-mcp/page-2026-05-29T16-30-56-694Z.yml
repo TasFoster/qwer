@@ -1,0 +1,296 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🔥 ЭЛТАДЖ гриль на углях" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 🔥
+        - generic [ref=e6]:
+          - text: ЭЛТАДЖ
+          - generic [ref=e7]: гриль на углях
+      - navigation [ref=e8]:
+        - link "Меню" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "О нас" [ref=e10] [cursor=pointer]:
+          - /url: /#about
+        - link "Доставка" [ref=e11] [cursor=pointer]:
+          - /url: /#delivery
+        - link "Контакты" [ref=e12] [cursor=pointer]:
+          - /url: /#contacts
+      - link "🛒 Корзина 0" [ref=e13] [cursor=pointer]:
+        - /url: /cart/
+        - text: 🛒 Корзина
+        - generic [ref=e14]: "0"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Шаурма · Шашлык · Живой огонь
+        - heading "Жар углей в каждом кусочке" [level=1] [ref=e20]:
+          - text: Жар углей
+          - text: в каждом
+          - generic [ref=e21]: кусочке
+        - paragraph [ref=e22]: Маринуем по семейному рецепту, жарим на живых углях и заворачиваем, пока горячо. Шаурма и шашлык от Элтаджа — без компромиссов.
+        - generic [ref=e23]:
+          - link "Смотреть меню" [ref=e24] [cursor=pointer]:
+            - /url: "#menu"
+          - link "Как мы готовим" [ref=e25] [cursor=pointer]:
+            - /url: "#about"
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: 14 лет
+            - text: у мангала
+          - generic [ref=e29]:
+            - generic [ref=e30]: 100%
+            - text: живой огонь
+          - generic [ref=e31]:
+            - generic [ref=e32]: ~40 мин
+            - text: до вашей двери
+      - generic [ref=e34]: 🌯
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Наше меню
+          - heading "С пылу, с жару" [level=2] [ref=e40]
+        - navigation [ref=e41]:
+          - link "Всё меню" [ref=e42] [cursor=pointer]:
+            - /url: /
+          - link "Шаурма" [ref=e43] [cursor=pointer]:
+            - /url: /category/shaurma/
+          - link "Шашлык" [ref=e44] [cursor=pointer]:
+            - /url: /category/shashlyk/
+          - link "Напитки" [ref=e45] [cursor=pointer]:
+            - /url: /category/napitki/
+          - link "Соусы" [ref=e46] [cursor=pointer]:
+            - /url: /category/sousy/
+      - generic [ref=e47]:
+        - article [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: 🌯
+            - generic [ref=e52]: Остро
+          - generic [ref=e53]:
+            - heading "Аджика острая" [level=3] [ref=e54]:
+              - link "Аджика острая" [ref=e55] [cursor=pointer]:
+                - /url: /product/adzhika-ostraya/
+            - paragraph [ref=e56]: Огненная аджика для тех, кто любит погорячее.
+            - paragraph [ref=e57]: 50 г
+            - generic [ref=e58]:
+              - generic [ref=e59]: 50 ₽
+              - button "В корзину" [ref=e61] [cursor=pointer]: +
+        - article [ref=e62]:
+          - generic [ref=e64]: 🌯
+          - generic [ref=e65]:
+            - heading "Айран" [level=3] [ref=e66]:
+              - link "Айран" [ref=e67] [cursor=pointer]:
+                - /url: /product/ayran/
+            - paragraph [ref=e68]: Освежающий кисломолочный напиток — лучший друг шашлыка.
+            - paragraph [ref=e69]: 0,5 л
+            - generic [ref=e70]:
+              - generic [ref=e71]: 120 ₽
+              - button "В корзину" [ref=e73] [cursor=pointer]: +
+        - article [ref=e74]:
+          - generic [ref=e76]: 🌯
+          - generic [ref=e77]:
+            - heading "Вегетарианская шаурма" [level=3] [ref=e78]:
+              - link "Вегетарианская шаурма" [ref=e79] [cursor=pointer]:
+                - /url: /product/shaurma-veg/
+            - paragraph [ref=e80]: Гриль-овощи, фалафель, хумус и свежая зелень в тёплом лаваше.
+            - paragraph [ref=e81]: 330 г
+            - generic [ref=e82]:
+              - generic [ref=e83]: 290 ₽
+              - button "В корзину" [ref=e85] [cursor=pointer]: +
+        - article [ref=e86]:
+          - generic [ref=e88]: 🌯
+          - generic [ref=e89]:
+            - heading "Лимонад тархун" [level=3] [ref=e90]:
+              - link "Лимонад тархун" [ref=e91] [cursor=pointer]:
+                - /url: /product/limonad-tarhun/
+            - paragraph [ref=e92]: Домашний лимонад на травах, в меру сладкий и очень освежающий.
+            - paragraph [ref=e93]: 0,5 л
+            - generic [ref=e94]:
+              - generic [ref=e95]: 150 ₽
+              - button "В корзину" [ref=e97] [cursor=pointer]: +
+        - article [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: 🍢
+            - generic [ref=e102]: Остро
+          - generic [ref=e103]:
+            - heading "Люля-кебаб" [level=3] [ref=e104]:
+              - link "Люля-кебаб" [ref=e105] [cursor=pointer]:
+                - /url: /product/lyulya-kebab/
+            - paragraph [ref=e106]: Рубленая баранина со специями и зеленью на шампуре. Подаётся с соусом наршараб.
+            - paragraph [ref=e107]: 220 г
+            - generic [ref=e108]:
+              - generic [ref=e109]: 420 ₽
+              - button "В корзину" [ref=e111] [cursor=pointer]: +
+        - article [ref=e112]:
+          - generic [ref=e114]: 🍢
+          - generic [ref=e115]:
+            - heading "Овощи на мангале" [level=3] [ref=e116]:
+              - link "Овощи на мангале" [ref=e117] [cursor=pointer]:
+                - /url: /product/ovoshchi-mangal/
+            - paragraph [ref=e118]: Запечённые на углях баклажан, перец, томаты и лук. Идеальный гарнир.
+            - paragraph [ref=e119]: 300 г
+            - generic [ref=e120]:
+              - generic [ref=e121]: 280 ₽
+              - button "В корзину" [ref=e123] [cursor=pointer]: +
+        - article [ref=e124]:
+          - generic [ref=e126]: 🌯
+          - generic [ref=e127]:
+            - heading "Соус наршараб" [level=3] [ref=e128]:
+              - link "Соус наршараб" [ref=e129] [cursor=pointer]:
+                - /url: /product/sous-narsharab/
+            - paragraph [ref=e130]: Гранатовый соус — классическое дополнение к шашлыку.
+            - paragraph [ref=e131]: 50 г
+            - generic [ref=e132]:
+              - generic [ref=e133]: 60 ₽
+              - button "В корзину" [ref=e135] [cursor=pointer]: +
+        - article [ref=e136]:
+          - generic [ref=e138]: 🌯
+          - generic [ref=e139]:
+            - heading "Соус чесночный" [level=3] [ref=e140]:
+              - link "Соус чесночный" [ref=e141] [cursor=pointer]:
+                - /url: /product/sous-chesnochnyy/
+            - paragraph [ref=e142]: Нежный сливочно-чесночный соус собственного приготовления.
+            - paragraph [ref=e143]: 50 г
+            - generic [ref=e144]:
+              - generic [ref=e145]: 50 ₽
+              - button "В корзину" [ref=e147] [cursor=pointer]: +
+        - article [ref=e148]:
+          - generic [ref=e150]: 🌯
+          - generic [ref=e151]:
+            - heading "Чай чёрный" [level=3] [ref=e152]:
+              - link "Чай чёрный" [ref=e153] [cursor=pointer]:
+                - /url: /product/chay-chyornyy/
+            - paragraph [ref=e154]: Крепкий горячий чай с чабрецом по-кавказски.
+            - paragraph [ref=e155]: 0,4 л
+            - generic [ref=e156]:
+              - generic [ref=e157]: 100 ₽
+              - button "В корзину" [ref=e159] [cursor=pointer]: +
+        - article [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: 🌯
+            - generic [ref=e164]: Хит
+          - generic [ref=e165]:
+            - heading "Шаурма классическая" [level=3] [ref=e166]:
+              - link "Шаурма классическая" [ref=e167] [cursor=pointer]:
+                - /url: /product/shaurma-klassicheskaya/
+            - paragraph [ref=e168]: Сочная курица на углях, свежие овощи, фирменный чесночный соус в тонком лаваше.
+            - paragraph [ref=e169]: 350 г
+            - generic [ref=e170]:
+              - generic [ref=e171]: 320 ₽
+              - button "В корзину" [ref=e173] [cursor=pointer]: +
+        - article [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]: 🌯
+            - generic [ref=e178]: Остро
+          - generic [ref=e179]:
+            - heading "Шаурма острая «Огонь»" [level=3] [ref=e180]:
+              - link "Шаурма острая «Огонь»" [ref=e181] [cursor=pointer]:
+                - /url: /product/shaurma-ognennaya/
+            - paragraph [ref=e182]: "Для любителей погорячее: двойная аджика, перец халапеньо и острый соус."
+            - paragraph [ref=e183]: 360 г
+            - generic [ref=e184]:
+              - generic [ref=e185]: 360 ₽
+              - button "В корзину" [ref=e187] [cursor=pointer]: +
+        - article [ref=e188]:
+          - generic [ref=e189]:
+            - generic [ref=e190]: 🌯
+            - generic [ref=e191]:
+              - generic [ref=e192]: Хит
+              - generic [ref=e193]: Остро
+          - generic [ref=e194]:
+            - heading "Шаурма по-кавказски" [level=3] [ref=e195]:
+              - link "Шаурма по-кавказски" [ref=e196] [cursor=pointer]:
+                - /url: /product/shaurma-po-kavkazski/
+            - paragraph [ref=e197]: Маринованная баранина, лук с зеленью, аджика и кисломолочный соус — рецепт Элтаджа.
+            - paragraph [ref=e198]: 400 г
+            - generic [ref=e199]:
+              - generic [ref=e200]: 390 ₽
+              - button "В корзину" [ref=e202] [cursor=pointer]: +
+        - article [ref=e203]:
+          - generic [ref=e205]: 🌯
+          - generic [ref=e206]:
+            - heading "Шаурма с говядиной" [level=3] [ref=e207]:
+              - link "Шаурма с говядиной" [ref=e208] [cursor=pointer]:
+                - /url: /product/shaurma-s-govyadinoy/
+            - paragraph [ref=e209]: Нежная говядина с углей, томаты, маринованный огурец, соус барбекю.
+            - paragraph [ref=e210]: 380 г
+            - generic [ref=e211]:
+              - generic [ref=e212]: 410 ₽
+              - button "В корзину" [ref=e214] [cursor=pointer]: +
+        - article [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: 🍢
+            - generic [ref=e219]: Хит
+          - generic [ref=e220]:
+            - heading "Шашлык из баранины" [level=3] [ref=e221]:
+              - link "Шашлык из баранины" [ref=e222] [cursor=pointer]:
+                - /url: /product/shashlyk-baranina/
+            - paragraph [ref=e223]: Молодая баранина, маринованная 12 часов, на живых углях. Подаётся с луком и лавашом.
+            - paragraph [ref=e224]: 250 г
+            - generic [ref=e225]:
+              - generic [ref=e226]: 590 ₽
+              - button "В корзину" [ref=e228] [cursor=pointer]: +
+        - article [ref=e229]:
+          - generic [ref=e231]: 🍢
+          - generic [ref=e232]:
+            - heading "Шашлык из курицы" [level=3] [ref=e233]:
+              - link "Шашлык из курицы" [ref=e234] [cursor=pointer]:
+                - /url: /product/shashlyk-kuritsa/
+            - paragraph [ref=e235]: Куриное бедро в ароматном маринаде, прожаренное до золотистой корочки.
+            - paragraph [ref=e236]: 250 г
+            - generic [ref=e237]:
+              - generic [ref=e238]: 390 ₽
+              - button "В корзину" [ref=e240] [cursor=pointer]: +
+        - article [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: 🍢
+            - generic [ref=e245]: Хит
+          - generic [ref=e246]:
+            - heading "Шашлык из свинины" [level=3] [ref=e247]:
+              - link "Шашлык из свинины" [ref=e248] [cursor=pointer]:
+                - /url: /product/shashlyk-svinina/
+            - paragraph [ref=e249]: Сочная свиная шейка на углях с дымком. Классика, которую любят все.
+            - paragraph [ref=e250]: 250 г
+            - generic [ref=e251]:
+              - generic [ref=e252]: 450 ₽
+              - button "В корзину" [ref=e254] [cursor=pointer]: +
+    - generic [ref=e256]:
+      - generic [ref=e258]:
+        - paragraph [ref=e259]: Почему Элтадж
+        - heading "Три правила мангала" [level=2] [ref=e260]
+      - generic [ref=e261]:
+        - article [ref=e262]:
+          - generic [ref=e263]:
+            - generic [ref=e264]: 🔥
+            - heading "Только живой огонь" [level=3] [ref=e265]
+            - paragraph [ref=e266]: Никаких электрогрилей. Дуб и фруктовые угли дают тот самый дымный вкус.
+        - article [ref=e267]:
+          - generic [ref=e268]:
+            - generic [ref=e269]: 🧂
+            - heading "Маринад с ночи" [level=3] [ref=e270]
+            - paragraph [ref=e271]: Мясо маринуется минимум 12 часов в специях по рецепту семьи Элтаджа.
+        - article [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e274]: ⚡
+            - heading "Готовим при вас" [level=3] [ref=e275]
+            - paragraph [ref=e276]: Жарим только после заказа и везём горячим в термосумке.
+  - contentinfo [ref=e277]:
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - text: 🔥 ЭЛТАДЖ
+        - paragraph [ref=e280]: Живой огонь, честное мясо и рецепты, которым уже не одно поколение. от Элтаджа
+      - generic [ref=e281]:
+        - heading "Доставка" [level=4] [ref=e282]
+        - paragraph [ref=e283]:
+          - text: Ежедневно 10:00 — 23:00
+          - text: Бесплатно от 1500 ₽
+          - text: Среднее время — 40 минут
+      - generic [ref=e284]:
+        - heading "Контакты" [level=4] [ref=e285]
+        - paragraph [ref=e286]:
+          - link "+7 (900) 000-00-00" [ref=e287] [cursor=pointer]:
+            - /url: tel:+79000000000
+          - text: ул. Угольная, 1
+          - link "Панель управления" [ref=e288] [cursor=pointer]:
+            - /url: /admin/
+    - generic [ref=e289]: © 2026 Гриль-дом «от Элтаджа». Сделано на живом огне.

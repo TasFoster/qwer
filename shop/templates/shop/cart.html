@@ -1,0 +1,50 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Корзина — Гриль-дом «от Элтаджа»{% endblock %}
+
+{% block content %}
+<section class="wrap">
+  <div class="section-head" style="margin-top:2.5rem">
+    <div><p class="eyebrow">Ваш заказ</p><h2>Корзина</h2></div>
+  </div>
+
+  {% if cart|length %}
+  <div class="layout">
+    <div class="panel">
+      {% for item in cart %}
+      <div class="line-item">
+        <div class="thumb">
+          {% if item.product.image %}<img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+          {% else %}{% if 'шашлык' in item.product.category.name|lower %}🍢{% else %}🌯{% endif %}{% endif %}
+        </div>
+        <div class="li-info">
+          <b><a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a></b>
+          <span>{{ item.price|floatformat:0 }} ₽ × {{ item.quantity }}</span>
+        </div>
+        <div class="li-sum">{{ item.total_price|floatformat:0 }} ₽</div>
+        <form action="{% url 'shop:cart_remove' item.product.id %}" method="post">
+          {% csrf_token %}
+          <button class="li-remove" type="submit" aria-label="Убрать">✕</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+
+    <aside class="panel summary">
+      <div class="row"><span>Блюд в заказе</span><span>{{ cart|length }} шт.</span></div>
+      <div class="row"><span>Доставка</span><span>рассчитаем при оформлении</span></div>
+      <div class="row total"><span>Итого</span><b>{{ cart.get_total_price|floatformat:0 }} ₽</b></div>
+      <a href="{% url 'shop:checkout' %}" class="btn btn-primary">Оформить заказ 🔥</a>
+      <a href="{% url 'shop:menu' %}" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.6rem">Добавить ещё</a>
+    </aside>
+  </div>
+  {% else %}
+  <div class="empty">
+    <div class="big">🛒</div>
+    <h2>В корзине пока пусто</h2>
+    <p>Самое время выбрать сочную шаурму или шашлык на углях.</p>
+    <a href="{% url 'shop:menu' %}" class="btn btn-primary">Перейти в меню</a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

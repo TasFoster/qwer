@@ -1,0 +1,18 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Заказ принят — Гриль-дом «от Элтаджа»{% endblock %}
+
+{% block content %}
+<section class="wrap">
+  <div class="done reveal">
+    <div class="seal">🔥</div>
+    <p class="eyebrow">Уже на углях</p>
+    <h1>Заказ принят!</h1>
+    <p class="num">№ {{ order.id }}</p>
+    <p>Спасибо, {{ order.name }}! Мы уже разжигаем мангал. Перезвоним по номеру
+       {{ order.phone }} для подтверждения.
+       {% if order.delivery == 'delivery' %}Привезём по адресу: {{ order.address }}.{% else %}Ждём вас на самовывоз.{% endif %}</p>
+    <a href="{% url 'shop:menu' %}" class="btn btn-primary">Вернуться в меню</a>
+  </div>
+</section>
+{% endblock %}

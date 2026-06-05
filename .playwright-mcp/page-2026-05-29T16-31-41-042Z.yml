@@ -1,0 +1,93 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🔥 ЭЛТАДЖ гриль на углях" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 🔥
+        - generic [ref=e6]:
+          - text: ЭЛТАДЖ
+          - generic [ref=e7]: гриль на углях
+      - navigation [ref=e8]:
+        - link "Меню" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "О нас" [ref=e10] [cursor=pointer]:
+          - /url: /#about
+        - link "Доставка" [ref=e11] [cursor=pointer]:
+          - /url: /#delivery
+        - link "Контакты" [ref=e12] [cursor=pointer]:
+          - /url: /#contacts
+      - link "🛒 Корзина 0" [ref=e13] [cursor=pointer]:
+        - /url: /cart/
+        - text: 🛒 Корзина
+        - generic [ref=e14]: "0"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e19]: 🍢
+        - generic [ref=e20]:
+          - link "← Назад в меню" [ref=e21] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e22]: Шашлык
+          - heading "Шашлык из баранины" [level=1] [ref=e23]
+          - generic [ref=e25]: Хит продаж
+          - paragraph [ref=e26]: Молодая баранина, маринованная 12 часов, на живых углях. Подаётся с луком и лавашом.
+          - paragraph [ref=e27]: "Порция: 250 г"
+          - paragraph [ref=e28]: 590 ₽
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - button "−" [ref=e31] [cursor=pointer]
+              - spinbutton [ref=e32]: "1"
+              - button "+" [ref=e33] [cursor=pointer]
+            - button "В корзину 🔥" [ref=e34] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: К столу
+          - heading "С этим берут" [level=2] [ref=e39]
+        - generic [ref=e40]:
+          - article [ref=e41]:
+            - generic [ref=e43]: 🍢
+            - generic [ref=e44]:
+              - heading "Люля-кебаб" [level=3] [ref=e45]:
+                - link "Люля-кебаб" [ref=e46] [cursor=pointer]:
+                  - /url: /product/lyulya-kebab/
+              - generic [ref=e47]:
+                - generic [ref=e48]: 420 ₽
+                - button "В корзину" [ref=e50] [cursor=pointer]: +
+          - article [ref=e51]:
+            - generic [ref=e53]: 🍢
+            - generic [ref=e54]:
+              - heading "Овощи на мангале" [level=3] [ref=e55]:
+                - link "Овощи на мангале" [ref=e56] [cursor=pointer]:
+                  - /url: /product/ovoshchi-mangal/
+              - generic [ref=e57]:
+                - generic [ref=e58]: 280 ₽
+                - button "В корзину" [ref=e60] [cursor=pointer]: +
+          - article [ref=e61]:
+            - generic [ref=e63]: 🍢
+            - generic [ref=e64]:
+              - heading "Шашлык из курицы" [level=3] [ref=e65]:
+                - link "Шашлык из курицы" [ref=e66] [cursor=pointer]:
+                  - /url: /product/shashlyk-kuritsa/
+              - generic [ref=e67]:
+                - generic [ref=e68]: 390 ₽
+                - button "В корзину" [ref=e70] [cursor=pointer]: +
+  - contentinfo [ref=e71]:
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - text: 🔥 ЭЛТАДЖ
+        - paragraph [ref=e74]: Живой огонь, честное мясо и рецепты, которым уже не одно поколение. от Элтаджа
+      - generic [ref=e75]:
+        - heading "Доставка" [level=4] [ref=e76]
+        - paragraph [ref=e77]:
+          - text: Ежедневно 10:00 — 23:00
+          - text: Бесплатно от 1500 ₽
+          - text: Среднее время — 40 минут
+      - generic [ref=e78]:
+        - heading "Контакты" [level=4] [ref=e79]
+        - paragraph [ref=e80]:
+          - link "+7 (900) 000-00-00" [ref=e81] [cursor=pointer]:
+            - /url: tel:+79000000000
+          - text: ул. Угольная, 1
+          - link "Панель управления" [ref=e82] [cursor=pointer]:
+            - /url: /admin/
+    - generic [ref=e83]: © 2026 Гриль-дом «от Элтаджа». Сделано на живом огне.

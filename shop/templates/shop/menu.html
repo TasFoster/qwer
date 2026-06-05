@@ -1,0 +1,113 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+{% if not active_category %}
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Шаурма · Шашлык · Живой огонь</p>
+      <h1>Жар углей<br>в каждом <span class="fire">кусочке</span></h1>
+      <p class="lead">Маринуем по семейному рецепту, жарим на живых углях и заворачиваем,
+        пока горячо. Шаурма и шашлык <span class="signature">от Элтаджа</span> — без компромиссов.</p>
+      <div class="cta">
+        <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+        <a href="#about" class="btn btn-ghost">Как мы готовим</a>
+      </div>
+      <div class="stats">
+        <div><b>14&nbsp;лет</b><span>у мангала</span></div>
+        <div><b>100%</b><span>живой огонь</span></div>
+        <div><b>~40&nbsp;мин</b><span>до вашей двери</span></div>
+      </div>
+    </div>
+    <div class="hero-art reveal" style="animation-delay:.15s">
+      <span class="glyph">🌯</span>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Наше меню</p>
+        <h2>{% if active_category %}{{ active_category.name }}{% else %}С пылу, с жару{% endif %}</h2>
+      </div>
+      <nav class="cats">
+        <a href="{% url 'shop:menu' %}" class="{% if not active_category %}active{% endif %}">Всё меню</a>
+        {% for c in categories %}
+          <a href="{% url 'shop:menu_by_category' c.slug %}"
+             class="{% if active_category.id == c.id %}active{% endif %}">{{ c.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+
+    {% if products %}
+    <div class="grid">
+      {% for p in products %}
+      <article class="card reveal" style="animation-delay:{{ forloop.counter0 }}0ms">
+        <div class="card-media">
+          {% if p.image %}<img src="{{ p.image.url }}" alt="{{ p.name }}" loading="lazy">
+          {% else %}<span class="ph">{% if 'шашлык' in p.category.name|lower %}🍢{% else %}🌯{% endif %}</span>{% endif %}
+          <div class="tags">
+            {% if p.is_hit %}<span class="tag hit">Хит</span>{% endif %}
+            {% if p.is_spicy %}<span class="tag spicy">Остро</span>{% endif %}
+          </div>
+        </div>
+        <div class="card-body">
+          <h3><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></h3>
+          <p class="desc">{{ p.description|truncatewords:14 }}</p>
+          {% if p.weight %}<p class="meta">{{ p.weight }}</p>{% endif %}
+          <div class="price-row">
+            <span class="price">{{ p.price|floatformat:0 }} <span>₽</span></span>
+            <form action="{% url 'shop:cart_add' p.id %}" method="post">
+              {% csrf_token %}
+              <input type="hidden" name="quantity" value="1">
+              <input type="hidden" name="next" value="{{ request.path }}">
+              <button class="add" type="submit" aria-label="В корзину">+</button>
+            </form>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty">
+      <div class="big">🍢</div>
+      <h2>Здесь пока пусто</h2>
+      <p>Добавьте блюда в <a href="{% url 'admin:index' %}" class="signature">панели управления</a>.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if not active_category %}
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Почему Элтадж</p>
+        <h2>Три правила мангала</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="card-body">
+        <span style="font-size:2.4rem">🔥</span>
+        <h3>Только живой огонь</h3>
+        <p class="desc">Никаких электрогрилей. Дуб и фруктовые угли дают тот самый дымный вкус.</p>
+      </div></article>
+      <article class="card"><div class="card-body">
+        <span style="font-size:2.4rem">🧂</span>
+        <h3>Маринад с ночи</h3>
+        <p class="desc">Мясо маринуется минимум 12 часов в специях по рецепту семьи Элтаджа.</p>
+      </div></article>
+      <article class="card"><div class="card-body">
+        <span style="font-size:2.4rem">⚡</span>
+        <h3>Готовим при вас</h3>
+        <p class="desc">Жарим только после заказа и везём горячим в термосумке.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}
